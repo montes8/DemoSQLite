@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:src="@drawable/perfil"
+        app:civ_border_width="2dp"
+        android:layout_marginTop="20dp"
+        app:civ_border_color="#ff5f47"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#E0E0E0"
+        android:layout_margin="20dp">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:hint=" Direccion de Email"
+        android:background="#FFFFFF"
+        android:ems="13"
+        android:drawablePadding="15dp"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_email"
+        android:inputType="textPassword"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_email" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:hint=" Contraseña"
+        android:ems="13"
+        android:drawablePadding="15dp"
+        android:textSize="14sp"
+        android:background="#FFFFFF"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_password"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Ingresar"
+        android:background="@drawable/butoon_shape"
+        android:textColor="#FFFFFF"
+        android:ems="14"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+   
+
+</LinearLayout>
