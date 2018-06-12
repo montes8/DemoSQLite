@@ -48,10 +48,11 @@
         android:textSize="14sp"
         android:background="#FFFFFF"
         android:inputType="textPassword"
+
         android:drawableLeft="@drawable/ic_password"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        />
+         />
 
     <Button
         android:layout_width="wrap_content"
@@ -81,23 +82,24 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_marginRight="15dp"
             android:layout_weight="1"
             android:background="@drawable/fondo_button_face"
+            android:drawableLeft="@drawable/facebook"
             android:gravity="center"
-            android:layout_marginRight="15dp"
-            android:textColor="#FFFFFF"
             android:text="Registrase"
-            android:textSize="15sp"
-             />
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:background="@drawable/fondo_button_tweter"
+            android:background="@drawable/fondo_button_twitter"
             android:layout_weight="1"
             android:textColor="#FFFFFF"
             android:layout_marginLeft="15dp"
             android:gravity="center"
-            android:text="Registrase"/>
+            android:text="Registrase"
+             />
 
     </LinearLayout>
 

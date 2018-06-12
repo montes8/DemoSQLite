@@ -6,6 +6,7 @@ import android.text.SpannableStringBuilder
 import android.graphics.Typeface
 import android.text.Spanned
 import android.text.style.StyleSpan
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 
@@ -18,10 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         configurarTextoRegistrate()
 
-        tvRegistrate.setOnClickListener{
 
-            startActivity<RegistrarActivity>()
-        }
     }
 
     fun configurarTextoRegistrate(){
@@ -32,5 +30,12 @@ class MainActivity : AppCompatActivity() {
         spannableStringBuilder.setSpan(boldSpan, 13, string.length,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         tvRegistrate.text = spannableStringBuilder
+
+
+        tvRegistrate.setOnClickListener{
+
+                startActivity<RegistrarActivity>()
+
+        }
     }
 }
