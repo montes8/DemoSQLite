@@ -29,10 +29,11 @@
         android:layout_margin="20dp">
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:hint=" Direccion de Email"
         android:background="#FFFFFF"
         android:ems="13"
+        android:paddingLeft="5dp"
         android:drawablePadding="15dp"
         android:textSize="14sp"
         android:drawableStart="@drawable/ic_email"
@@ -42,14 +43,14 @@
         android:drawableLeft="@drawable/ic_email" />
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:hint=" Contraseña"
         android:ems="13"
         android:drawablePadding="15dp"
         android:textSize="14sp"
         android:background="#FFFFFF"
         android:inputType="textPassword"
-
+        android:paddingLeft="5dp"
         android:drawableLeft="@drawable/ic_password"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
