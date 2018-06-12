@@ -87,8 +87,8 @@
             android:layout_marginRight="15dp"
             android:textColor="#FFFFFF"
             android:text="Registrase"
-
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+             />
         <TextView
             android:layout_width="0dp"
             android:layout_height="50dp"
@@ -102,10 +102,11 @@
     </LinearLayout>
 
     <TextView android:id="@+id/tvRegistrate"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="start"
+        android:background="#E0E0E0"
+        android:text="@string/registrate"
         android:textColor="#ff5f47"/>
 
 </LinearLayout>

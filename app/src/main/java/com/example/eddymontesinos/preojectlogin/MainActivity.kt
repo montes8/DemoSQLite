@@ -15,18 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        configurarTextoRegistrate()
+        //configurarTextoRegistrate()
     }
 
-    fun configurarTextoRegistrate(){
-        val string = getString(R.string.registrate)
 
-        val spannableStringBuilder = SpannableStringBuilder(string)
-
-        val boldSpan = StyleSpan(Typeface.BOLD)
-
-        spannableStringBuilder.setSpan(boldSpan, 13, string.length,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        tvRegistrate.text = spannableStringBuilder
-    }
 }
