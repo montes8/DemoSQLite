@@ -5,10 +5,16 @@ import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.graphics.Typeface
 import android.text.Spanned
+import android.text.style.ClickableSpan
 import android.text.style.StyleSpan
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
+import android.content.Intent
+import android.view.View
+import android.text.method.LinkMovementMethod
+import android.widget.TextView
+import org.jetbrains.anko.toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         configurarTextoRegistrate()
 
 
+
     }
 
     fun configurarTextoRegistrate(){
@@ -27,15 +34,20 @@ class MainActivity : AppCompatActivity() {
         val spannableStringBuilder = SpannableStringBuilder(string)
         val boldSpan = StyleSpan(Typeface.BOLD)
 
-        spannableStringBuilder.setSpan(boldSpan, 13, string.length,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        val clickableSpan = object: ClickableSpan() {
 
-        tvRegistrate.text = spannableStringBuilder
-
-
-        tvRegistrate.setOnClickListener{
-
+            override fun onClick(widget: View?) {
                 startActivity<RegistrarActivity>()
-
+            }
         }
+
+        spannableStringBuilder.setSpan(boldSpan, 13, string.length,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannableStringBuilder.setSpan(clickableSpan, 13, string.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        tvRegistrate.text=spannableStringBuilder
+        tvRegistrate.movementMethod = LinkMovementMethod.getInstance()
+
     }
+
+
 }

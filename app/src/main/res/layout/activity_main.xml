@@ -7,19 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="match_parent"
         android:layout_height="96dp"
         android:src="@drawable/perfil"
         app:civ_border_width="2dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
         app:civ_border_color="#ff5f47"/>
-
 
     <LinearLayout
         android:layout_width="match_parent"
