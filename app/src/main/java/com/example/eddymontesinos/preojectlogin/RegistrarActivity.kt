@@ -12,6 +12,7 @@ import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_registrar.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
+import org.jetbrains.anko.toast
 
 class RegistrarActivity : AppCompatActivity() {
 
@@ -20,11 +21,11 @@ class RegistrarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar)
 
-        settingToolbar()
+        ajustesToolbar()
         cargarImagenGaleria()
     }
 
-    private fun settingToolbar(){
+    private fun ajustesToolbar(){
         setSupportActionBar(mToolbar)
         title = getString(R.string.toolbar_registrate)
         mToolbar.navigationIcon = getDrawable(R.drawable.flecha_back)
@@ -36,14 +37,12 @@ class RegistrarActivity : AppCompatActivity() {
     private fun cargarImagen() {
         //metodo simple cargaimagenes de galeria
         //val intent:Intent = Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-
         val opciones = arrayOf<CharSequence>("Tomar foto", "Cargar imagen", "Cancelar")
         val alertOpciones = AlertDialog.Builder(this@RegistrarActivity)
         alertOpciones.setTitle("Seleccione una Opcion")
         alertOpciones.setItems(opciones) { dialog, i ->
             if (opciones[i] == "Tomar foto") {
-
-                Toast.makeText(application, "tomar foto", Toast.LENGTH_LONG).show()
+                toast("llamar a la camara")
 
             } else {
                 if (opciones[i] == "Cargar imagen") {
@@ -69,7 +68,6 @@ class RegistrarActivity : AppCompatActivity() {
         }
     }
     fun cargarImagenGaleria(){
-
         button_cargar_img.onClick {
             cargarImagen()
         }

@@ -88,7 +88,7 @@
         android:layout_height="28dp"
         android:layout_marginEnd="35dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/fondo_register"
         android:ems="14"
         android:inputType="textPersonName"
@@ -101,17 +101,17 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="27dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="35dp"
         android:layout_marginStart="35dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/butoon_shape"
         android:ems="19"
         android:text="Registrarse"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
     <Button
         android:id="@+id/button_cargar_img"
@@ -133,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="22dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="Nombre Completo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_cargar_img" />
@@ -146,7 +146,8 @@
         android:layout_marginTop="8dp"
         android:text="Correo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        android:layout_marginLeft="40dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -156,7 +157,8 @@
         android:layout_marginTop="8dp"
         android:text="Contraseña"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        android:layout_marginLeft="40dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -166,7 +168,8 @@
         android:layout_marginTop="8dp"
         android:text="Telefono"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        android:layout_marginLeft="40dp" />
 
 
 </android.support.constraint.ConstraintLayout>
