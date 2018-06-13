@@ -14,6 +14,7 @@ import android.support.v7.app.AlertDialog
 
 import kotlinx.android.synthetic.main.activity_registrar.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import java.io.File
 
@@ -28,7 +29,10 @@ class RegistrarActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registrar)
 
         ajusteToolbar()
+        onClickButton()
         cargarImagenGaleria()
+
+
     }
 
     private fun ajusteToolbar(){
@@ -90,6 +94,7 @@ class RegistrarActivity : AppCompatActivity() {
 
 
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode== Activity.RESULT_OK){
@@ -97,12 +102,18 @@ class RegistrarActivity : AppCompatActivity() {
             profile_image.setImageURI(path)
         }
     }
+
     fun cargarImagenGaleria(){
         button_cargar_img.onClick {
             cargarImagen()
         }
 
 
+    }
+
+    fun onClickButton(){
+
+        button_click_register.onClick { startActivity<HomeActivity>() }
     }
 }
 
