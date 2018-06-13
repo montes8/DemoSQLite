@@ -14,7 +14,7 @@ import android.text.method.LinkMovementMethod
 import android.widget.Toolbar
 
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
