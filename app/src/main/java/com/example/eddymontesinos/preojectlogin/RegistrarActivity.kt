@@ -21,11 +21,11 @@ class RegistrarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar)
 
-        ajustesToolbar()
+        ajusteToolbar()
         cargarImagenGaleria()
     }
 
-    private fun ajustesToolbar(){
+    private fun ajusteToolbar(){
         setSupportActionBar(mToolbar)
         title = getString(R.string.toolbar_registrate)
         mToolbar.navigationIcon = getDrawable(R.drawable.flecha_back)
