@@ -1,36 +1,36 @@
 package com.example.eddymontesinos.preojectlogin
 
 
+
 import android.app.Activity
-import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
 import android.widget.Toast
-import android.widget.Toolbar
+
 import kotlinx.android.synthetic.main.activity_registrar.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
 class RegistrarActivity : AppCompatActivity() {
 
-    private val CAMERA_REQUEST_CODE = 1000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar)
 
+        settingToolbar()
+        cargarImagenGaleria()
+    }
 
-
-        val toolbar:Toolbar = findViewById(R.id.activity_toolbar_register)
-        toolbar.title=getString(R.string.toolbar_registrate)
-
-
-
-
-     cargarImagenGaleria()
+    private fun settingToolbar(){
+        setSupportActionBar(mToolbar)
+        title = getString(R.string.toolbar_registrate)
+        mToolbar.navigationIcon = getDrawable(R.drawable.flecha_back)
+        mToolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun cargarImagen() {
