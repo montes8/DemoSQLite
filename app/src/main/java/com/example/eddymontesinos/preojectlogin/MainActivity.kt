@@ -7,14 +7,11 @@ import android.graphics.Typeface
 import android.text.Spanned
 import android.text.style.ClickableSpan
 import android.text.style.StyleSpan
-import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
-import android.content.Intent
 import android.view.View
 import android.text.method.LinkMovementMethod
-import android.widget.TextView
-import org.jetbrains.anko.toast
+import android.widget.Toolbar
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,9 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         configurarTextoRegistrate()
-
-
 
     }
 
@@ -40,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity<RegistrarActivity>()
             }
         }
-
         spannableStringBuilder.setSpan(boldSpan, 13, string.length,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         spannableStringBuilder.setSpan(clickableSpan, 13, string.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 

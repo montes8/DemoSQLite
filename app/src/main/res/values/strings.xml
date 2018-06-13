@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">PreojectLogin</string>
     <string name="registrate">¿Eres nuevo? Registrate</string>
+    <string name="text_registrarte">Registrarse</string>
+
+    <string name="toolbar_registrate">Registrate</string>
 </resources>
