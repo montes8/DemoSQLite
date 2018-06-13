@@ -22,10 +22,8 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="411dp"
-        android:layout_height="124dp"
+        android:layout_height="110dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/perfil"
@@ -38,23 +36,20 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="323dp"
-        android:layout_height="205dp"
+        android:layout_width="296dp"
+        android:layout_height="183dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:background="#E0E0E0"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image">
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="33dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:background="#FFFFFF"
@@ -62,14 +57,14 @@
             android:drawablePadding="15dp"
             android:drawableStart="@drawable/ic_email"
             android:ems="13"
-            android:hint=" Direccion de Email"
+            android:hint=" Correo"
             android:inputType="textEmailAddress"
             android:paddingLeft="5dp"
             android:textSize="14sp" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="33dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:background="#FFFFFF"
@@ -83,11 +78,11 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/butoon_shape"
-            android:ems="14"
+            android:ems="13"
             android:text="Ingresar"
             android:textColor="#FFFFFF" />
 
@@ -102,12 +97,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="333dp"
+        android:layout_width="304dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
@@ -116,11 +109,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.466">
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="35dp"
             android:layout_marginRight="15dp"
             android:layout_weight="1"
             android:background="@drawable/fondo_button_face"
@@ -132,7 +126,7 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:background="@drawable/fondo_button_twitter"
