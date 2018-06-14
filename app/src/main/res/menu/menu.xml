@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_perfil"
+            android:icon="@mipmap/ic_profile"
+            android:title="Pefirl"
+            />
+        <item
+            android:id="@+id/menu_fotos"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="Fotos"/>
+        <item
+            android:id="@+id/menu_email"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="Pefirl"/>
+    </group>
+    <item android:title="Otras opciones">
+
+        <menu>
+            <item
+                android:id="@+id/menu_borrar"
+                android:icon="@android:drawable/ic_menu_delete"
+                android:title="Borrar"/>
+            <item
+                android:id="@+id/menu_ayuda"
+                android:icon="@android:drawable/ic_menu_help"
+                android:title="Ayuda"/>
+        </menu>
+    </item>
+</menu>
