@@ -4,4 +4,7 @@
     <string name="text_registrarte">Registrarse</string>
 
     <string name="toolbar_registrate">Registrate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
