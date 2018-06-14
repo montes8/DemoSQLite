@@ -6,7 +6,7 @@
         <item
             android:id="@+id/menu_perfil"
             android:icon="@mipmap/ic_profile"
-            android:title="Pefirl"
+            android:title="Pefil"
             />
         <item
             android:id="@+id/menu_fotos"
@@ -15,7 +15,7 @@
         <item
             android:id="@+id/menu_email"
             android:icon="@android:drawable/ic_dialog_email"
-            android:title="Pefirl"/>
+            android:title="Email"/>
     </group>
     <item android:title="Otras opciones">
 
