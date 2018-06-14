@@ -3,19 +3,30 @@ package com.example.eddymontesinos.preojectlogin
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.LinearLayout
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
+       var nonce:LinearLayout
+
+        var anima : Animation
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        nonce=findViewById(R.id.once)
 
-       llamarSplash()
+        anima = AnimationUtils.loadAnimation(this, R.anim.animacion)
+        nonce.animation=anima
+
 
 
     }
-
-
     fun llamarSplash (){
         val background = object : Thread() {
             override fun run() {

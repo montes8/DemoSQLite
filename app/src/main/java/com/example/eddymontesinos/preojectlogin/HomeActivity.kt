@@ -7,14 +7,19 @@ import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
+import android.view.Menu
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_home.*
+import com.example.eddymontesinos.preojectlogin.fragments.EmailFragment
+import com.example.eddymontesinos.preojectlogin.fragments.FotosFragment
+import com.example.eddymontesinos.preojectlogin.fragments.PerfilFragment
+import kotlinx.android.synthetic.main.toolbar.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 class HomeActivity : AppCompatActivity() {
 
-    var drawerLayout :DrawerLayout? = null
-    var navigationView:NavigationView?=null
+    lateinit var drawerLayout :DrawerLayout
+    lateinit var navigationView:NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +30,7 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(mToolbar_home )
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_navigation)//definimco que imagen queremos llamr la imagen
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)//habilitamos el icono
-
+        cambiarFragmento(PerfilFragment(),navigationView?.menu.getItem(0))
         navegacionDrawer()
 
     }
@@ -37,6 +42,8 @@ class HomeActivity : AppCompatActivity() {
                   drawerLayout!!.openDrawer(GravityCompat.START)
                   return true
               }
+             R.id.info -> { startActivity<PruebaActivity>()}
+
         }
         return super.onOptionsItemSelected(item)
     }
@@ -51,7 +58,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun navegacionDrawer(){
-        navigationView!!.setNavigationItemSelectedListener { item ->
+        navigationView.setNavigationItemSelectedListener { item ->
             var gestorDeFragmentos = false
             var fragment : Fragment? = null
             when (item.itemId) {
@@ -76,10 +83,16 @@ class HomeActivity : AppCompatActivity() {
             }
             if (gestorDeFragmentos){
                 cambiarFragmento(fragment,item)
-                drawerLayout!!.closeDrawers()
+                drawerLayout?.closeDrawers()
             }
             true
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+
+        menuInflater.inflate(R.menu.menu_horizontal, menu)
+        return true
     }
 }

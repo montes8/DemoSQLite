@@ -6,7 +6,7 @@
         <item
             android:id="@+id/menu_perfil"
             android:icon="@mipmap/ic_profile"
-            android:title="Pefil"
+            android:title="Perfil"
             />
         <item
             android:id="@+id/menu_fotos"
