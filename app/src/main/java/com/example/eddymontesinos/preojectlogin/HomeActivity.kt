@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        drawerLayout = findViewById(R.id.drawer_layout)
+        drawerLayout = findViewById(R.id.drawer_layout)//traemos la vista de nuestro draerLayout
 
         setSupportActionBar(mToolbar_home )
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_navigation)//definimco que imagen queremos llamr la imagen
@@ -24,14 +24,13 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
+    //registramos evento navigationDrawer
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         when(item.itemId){
               android.R.id.home -> {
                   drawerLayout!!.openDrawer(GravityCompat.START)
                   return true
               }
-
         }
         return super.onOptionsItemSelected(item)
     }
