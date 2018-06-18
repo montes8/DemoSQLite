@@ -74,6 +74,10 @@ class HomeActivity : AppCompatActivity() {
                     fragment = EmailFragment()
                     gestorDeFragmentos = true
                 }
+                R.id.menu_contactame -> {
+                    fragment = EmailFragment()
+                    gestorDeFragmentos = true
+                }
                 R.id.menu_borrar -> {
                     toast("Borrar")
                 }

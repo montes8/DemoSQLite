@@ -1,5 +1,6 @@
 package com.example.eddymontesinos.preojectlogin
 
+import android.arch.persistence.room.Room
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
@@ -11,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 import android.view.View
 import android.text.method.LinkMovementMethod
-import android.widget.Toolbar
+
 
 
 class LoginActivity : AppCompatActivity() {

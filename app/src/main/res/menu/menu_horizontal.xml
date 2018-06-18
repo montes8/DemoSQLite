@@ -18,6 +18,12 @@
         android:title="Ayuda"
         android:icon="@mipmap/ic_help"
         app:showAsAction="always"/>
+    <item android:id="@+id/clima"
+        android:title="Clima"
+        app:showAsAction="never"/>
+    <item android:id="@+id/reporte_terremotos"
+        android:title="Terremotos"
+        app:showAsAction="never"/>
     <item android:id="@+id/salir"
         android:title="Salir"
         app:showAsAction="never"/>

@@ -14,8 +14,6 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
-
-
         val anima : Animation
         val anima2 : Animation
 
@@ -28,8 +26,8 @@ class SplashActivity : AppCompatActivity() {
         once.animation=anima
         doce.animation=anima2
 
-        llamarSplash()
 
+        llamarSplash()
 
 
     }
