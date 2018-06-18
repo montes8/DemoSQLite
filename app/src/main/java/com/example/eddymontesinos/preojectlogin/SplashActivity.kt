@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
+import com.example.eddymontesinos.preojectlogin.R.id.once
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
@@ -13,16 +14,21 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
-       var nonce:LinearLayout
 
-        var anima : Animation
+
+        val anima : Animation
+        val anima2 : Animation
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        nonce=findViewById(R.id.once)
+
 
         anima = AnimationUtils.loadAnimation(this, R.anim.animacion)
-        nonce.animation=anima
+        anima2 = AnimationUtils.loadAnimation(this,R.anim.animacion_botton)
+        once.animation=anima
+        doce.animation=anima2
+
+        llamarSplash()
 
 
 

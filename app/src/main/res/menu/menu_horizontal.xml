@@ -7,16 +7,19 @@
     <item android:id="@+id/cofiguracion"
         android:title="Configuracion"
 
-        android:icon="@android:drawable/ic_menu_preferences"
+        android:icon="@mipmap/ic_setting"
         app:showAsAction="always"
         />
     <item android:id="@+id/info"
         android:title="Informacion"
-        android:icon="@android:drawable/ic_menu_info_details"
+        android:icon="@mipmap/ic_info"
         app:showAsAction="always"/>
     <item android:id="@+id/ayuda"
         android:title="Ayuda"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@mipmap/ic_help"
+        app:showAsAction="always"/>
+    <item android:id="@+id/salir"
+        android:title="Salir"
         app:showAsAction="never"/>
 
 </menu>
