@@ -11,11 +11,11 @@ import android.util.Log
 import com.example.eddymontesinos.preojectlogin.adapter.UsuarioAdapter
 import com.example.eddymontesinos.preojectlogin.model.Usuario
 
-import kotlinx.android.synthetic.main.activity_prueba.*
+import kotlinx.android.synthetic.main.activity_listausuarios.*
 import org.jetbrains.anko.toast
 
 
-class PruebaActivity : AppCompatActivity() {
+class ListaUsuariosActivity : AppCompatActivity() {
 
     var usuAdapter : UsuarioAdapter? = null
     private lateinit var lista : List<Usuario>
@@ -23,29 +23,15 @@ class PruebaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_prueba)
+        setContentView(R.layout.activity_listausuarios)
 
             recyclerView()
 
             refrescarListar()
         }
 
-    /*
-                val tarea = object : AsyncTask<Void, Void, List<Usuario>>(){
-                 override fun doInBackground(vararg params: Void?): List<Usuario> {
-                    return DemoApplication.database!!.usuarioDao().listas()
-                    }
-                      override fun onPostExecute(result: List<Usuario>?) {
-                        super.onPostExecute(result)
-                            if(result != null){
-                            usuAdapter!!.addList(result!!)
-                        }else{
-                            toast("lista nula")
-                        }
-                    }
-                }
-                tarea.execute()*/
-    
+
+
     fun recyclerView(){
             usuAdapter = UsuarioAdapter()
 
@@ -63,7 +49,7 @@ class PruebaActivity : AppCompatActivity() {
                 }.start()
             }
 
-            rvPeople.layoutManager = LinearLayoutManager(this@PruebaActivity)
+            rvPeople.layoutManager = LinearLayoutManager(this@ListaUsuariosActivity)
             rvPeople.adapter = usuAdapter
      }
 
@@ -74,6 +60,24 @@ class PruebaActivity : AppCompatActivity() {
                 usuAdapter!!.addList(lista)
             }
         }.start()
+
+        /*
+               val tarea = object : AsyncTask<Void, Void, List<Usuario>>(){
+                override fun doInBackground(vararg params: Void?): List<Usuario> {
+                   return DemoApplication.database!!.usuarioDao().listas()
+                   }
+                     override fun onPostExecute(result: List<Usuario>?) {
+                       super.onPostExecute(result)
+                           if(result != null){
+                           usuAdapter!!.addList(result!!)
+                       }else{
+                           toast("lista nula")
+                       }
+                   }
+               }
+               tarea.execute()*/
     }
+
+
 
  }

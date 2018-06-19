@@ -14,4 +14,7 @@ interface UsuarioDao {
 
     @Delete
     fun deleteUser(usuarios: Usuario):Int
+
+    @Update
+    fun updateUser(usuarios: Usuario)
 }

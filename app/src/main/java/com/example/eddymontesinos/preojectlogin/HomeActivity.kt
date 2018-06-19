@@ -9,6 +9,7 @@ import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.example.eddymontesinos.preojectlogin.fragments.EmailFragment
 import com.example.eddymontesinos.preojectlogin.fragments.FotosFragment
 import com.example.eddymontesinos.preojectlogin.fragments.PerfilFragment
@@ -42,7 +43,11 @@ class HomeActivity : AppCompatActivity() {
                   drawerLayout!!.openDrawer(GravityCompat.START)
                   return true
               }
-             R.id.info -> { startActivity<PruebaActivity>()}
+             R.id.info -> { startActivity<ListaUsuariosActivity>()}
+
+             R.id.ayuda ->{
+
+             }
 
         }
         return super.onOptionsItemSelected(item)

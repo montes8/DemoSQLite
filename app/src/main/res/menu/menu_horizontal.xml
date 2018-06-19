@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     >
 
     <item android:id="@+id/cofiguracion"
         android:title="Configuracion"
-
         android:icon="@mipmap/ic_setting"
-        app:showAsAction="always"
-        />
+        app:showAsAction="always"/>
     <item android:id="@+id/info"
         android:title="Informacion"
         android:icon="@mipmap/ic_info"
@@ -17,7 +14,8 @@
     <item android:id="@+id/ayuda"
         android:title="Ayuda"
         android:icon="@mipmap/ic_help"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"/>
     <item android:id="@+id/clima"
         android:title="Clima"
         app:showAsAction="never"/>
