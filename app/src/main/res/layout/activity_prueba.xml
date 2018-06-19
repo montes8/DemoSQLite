@@ -5,66 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".PruebaActivity"
-    android:background="#ff6e40">
+    >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="LISTA DE USUARIOS"
+    android:gravity="center"
+    android:textColor="#ff6e40"
+    android:textStyle="bold"/>
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPeople"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@drawable/button_style">
-
-        <ImageView
-            android:id="@+id/text_view_id1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp"
-            android:src="@mipmap/ic_usuario"
-            />
-
-        <TextView
-            android:id="@+id/text_nombre"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="3"
-            android:ems="5"
-            android:gravity="center"
-            android:hint="nombre"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/text_usuario"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="3"
-            android:ems="5"
-            android:gravity="center"
-            android:hint="usuario"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/text_password"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="3"
-            android:ems="5"
-            android:gravity="center"
-            android:hint="password"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:id="@+id/image_delete_user"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            app:srcCompat="@android:drawable/ic_menu_delete" />
-
-    </LinearLayout>
-
+        android:layout_height="match_parent"
+        tools:listitem="@layout/molde_user"
+        tools:itemCount="5"/>
 
 </LinearLayout>

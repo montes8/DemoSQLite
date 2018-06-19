@@ -1,24 +1,29 @@
 package com.example.eddymontesinos.preojectlogin
 
-
-
 import android.app.Activity
+import android.arch.persistence.room.Room
 import android.content.Intent
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
-
-
+import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
+import com.example.eddymontesinos.preojectlogin.database.DemoDataBase
+import com.example.eddymontesinos.preojectlogin.moldes.Usuarios
 import kotlinx.android.synthetic.main.activity_registrar.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 import org.jetbrains.anko.startActivity
+
 import org.jetbrains.anko.toast
 import java.io.File
 
+
 class RegistrarActivity : AppCompatActivity() {
+
+    private val userAdapter = UsuarioAdapter()
 
     private val CARPETA_RAIZ = "misImagenes/"
     private val RUTA_IMAGE = CARPETA_RAIZ + "misFotos"
@@ -29,11 +34,40 @@ class RegistrarActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registrar)
 
         ajusteToolbar()
-        onClickButton()
         cargarImagenGaleria()
 
+        button_click_register.setOnClickListener{
 
-    }
+
+            Thread {
+                val usuario = Usuarios()
+                usuario.nombre = edit_text_nombre.text.toString()
+                usuario.nombreUsuario = edit_text_user.text.toString()
+                usuario.contraseña = edit_password.text.toString()
+                usuario.pais = edit_pais.text.toString()
+
+                DemoApplication.database!!.usuarioDao().insert(usuario)
+                DemoApplication.database!!.usuarioDao().listas().forEach() {
+
+                    Log.d("listanombre", "nombre -- ${it.nombre}")
+                    Log.d("listaApellido", "apellido -- ${it.nombreUsuario}")
+                    Log.d("listaPassword", "pasword -- ${it.contraseña}")
+                    Log.d("listaPaises", "paises -- ${it.pais}")
+                }
+
+            }.start()
+
+            startActivity<PruebaActivity>()
+
+         }
+
+      }
+
+
+
+
+
+
 
     private fun ajusteToolbar(){
         setSupportActionBar(mToolbar)
@@ -111,10 +145,11 @@ class RegistrarActivity : AppCompatActivity() {
 
     }
 
-    fun onClickButton(){
 
-        button_click_register.onClick { startActivity<HomeActivity>() }
-    }
+
+
+
+
 }
 
 

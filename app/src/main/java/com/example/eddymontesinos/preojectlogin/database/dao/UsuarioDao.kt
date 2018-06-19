@@ -5,8 +5,8 @@ import com.example.eddymontesinos.preojectlogin.moldes.Usuarios
 
 @Dao
 interface UsuarioDao {
+    
     @Query("select * from Usuarios")
-
     fun listas() : List<Usuarios>
 
     @Insert

@@ -4,16 +4,19 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
 @Entity
-class Usuarios {
+class Usuarios (
+        @PrimaryKey(autoGenerate = true)
+        var idUsu : Long? = null,
 
-    @PrimaryKey(autoGenerate = true)
-    var idUsu : Long? = null
+        var nombre : String? = "",
 
-    var nombre : String? = null
+        var nombreUsuario : String? = "",
 
-    var nombreUsuario : String? = null
+        var contraseña :String? = "",
 
-    var contraseña :String? = null
+        var pais :String? = ""
+)
 
-    var pais :String? = null
-}
+
+
+

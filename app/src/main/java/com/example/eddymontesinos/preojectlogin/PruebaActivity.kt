@@ -1,37 +1,53 @@
 package com.example.eddymontesinos.preojectlogin
 
-import android.arch.persistence.room.Room
+
+
+import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.example.eddymontesinos.preojectlogin.database.DemoDataBase
+import android.os.Handler
+import android.support.v7.widget.LinearLayoutManager
 import com.example.eddymontesinos.preojectlogin.moldes.Usuarios
+import kotlinx.android.synthetic.main.activity_prueba.*
+import org.jetbrains.anko.toast
+
 
 class PruebaActivity : AppCompatActivity() {
+
+    var usuAdapter : UsuarioAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_prueba)
 
-        val db: DemoDataBase = Room.databaseBuilder(applicationContext,
-                DemoDataBase::class.java,
-                "tablapersonas").build()
+        usuAdapter = UsuarioAdapter()
+        rvPeople.layoutManager = LinearLayoutManager(this@PruebaActivity)
+        rvPeople.adapter = usuAdapter
+
+        val handler = Handler()
 
         Thread {
-            val usuario = Usuarios()
-            usuario.nombre = "Gabii"
-            usuario.nombreUsuario = "sardelli"
-            usuario.contraseña = "hola"
-            usuario.pais = "Argentina"
-
-            db.usuarioDao().insert(usuario)
-            db.usuarioDao().listas().forEach() {
-
-                Log.d("listapesonas", "nombre -- ${it.nombre}")
-                Log.d("listapesonas", "apellido -- ${it.nombreUsuario}")
-                Log.d("listapesonas", "contraseña -- ${it.contraseña}")
+            val lista = DemoApplication.database!!.usuarioDao().listas()
+            handler.post{
+                usuAdapter!!.addList(lista)
             }
-
         }.start()
+/*
+        val tarea = object : AsyncTask<Void, Void, List<Usuarios>>(){
+         override fun doInBackground(vararg params: Void?): List<Usuarios> {
+            return DemoApplication.database!!.usuarioDao().listas()
+            }
+              override fun onPostExecute(result: List<Usuarios>?) {
+                super.onPostExecute(result)
+                    if(result != null){
+                    usuAdapter!!.addList(result!!)
+                }else{
+                    toast("lista nula")
+                }
+            }
+        }
+        tarea.execute()*/
     }
+
+
 }
