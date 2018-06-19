@@ -1,10 +1,10 @@
-package com.example.eddymontesinos.preojectlogin.moldes
+package com.example.eddymontesinos.preojectlogin.model
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
 @Entity
-class Usuarios (
+class Usuario (
         @PrimaryKey(autoGenerate = true)
         var idUsu : Long? = null,
 

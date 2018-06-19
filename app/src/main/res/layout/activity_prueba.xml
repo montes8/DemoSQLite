@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#f87503"
     tools:context=".PruebaActivity"
     >
 <TextView
@@ -13,8 +14,40 @@
     android:layout_height="wrap_content"
     android:text="LISTA DE USUARIOS"
     android:gravity="center"
-    android:textColor="#ff6e40"
+    android:layout_marginTop="10dp"
+    android:textColor="#ffffff"
     android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="NOMBRE"
+        android:textColor="#ffffff"
+        android:gravity="end"
+        android:textStyle="bold"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="USUARIO"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="CONTRASEÑA"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvPeople"

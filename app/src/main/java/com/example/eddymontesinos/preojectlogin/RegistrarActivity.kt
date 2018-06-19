@@ -1,7 +1,6 @@
 package com.example.eddymontesinos.preojectlogin
 
 import android.app.Activity
-import android.arch.persistence.room.Room
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -9,10 +8,9 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
-import com.example.eddymontesinos.preojectlogin.database.DemoDataBase
-import com.example.eddymontesinos.preojectlogin.moldes.Usuarios
+import com.example.eddymontesinos.preojectlogin.adapter.UsuarioAdapter
+import com.example.eddymontesinos.preojectlogin.model.Usuario
 import kotlinx.android.synthetic.main.activity_registrar.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 import org.jetbrains.anko.startActivity
@@ -40,14 +38,14 @@ class RegistrarActivity : AppCompatActivity() {
 
 
             Thread {
-                val usuario = Usuarios()
+                val usuario = Usuario()
                 usuario.nombre = edit_text_nombre.text.toString()
                 usuario.nombreUsuario = edit_text_user.text.toString()
                 usuario.contraseña = edit_password.text.toString()
                 usuario.pais = edit_pais.text.toString()
 
                 DemoApplication.database!!.usuarioDao().insert(usuario)
-                DemoApplication.database!!.usuarioDao().listas().forEach() {
+                DemoApplication.database!!.usuarioDao().listas().forEach{
 
                     Log.d("listanombre", "nombre -- ${it.nombre}")
                     Log.d("listaApellido", "apellido -- ${it.nombreUsuario}")
@@ -60,6 +58,7 @@ class RegistrarActivity : AppCompatActivity() {
             startActivity<PruebaActivity>()
 
          }
+
 
       }
 

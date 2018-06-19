@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ff6e40"
+    android:background="#f87503"
     android:orientation="vertical">
 
 
@@ -23,6 +23,11 @@
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:src="@mipmap/ic_usuario" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/text_nombre"
@@ -34,6 +39,11 @@
             android:hint="nombre"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/text_usuario"
@@ -45,6 +55,11 @@
             android:hint="usuario"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/text_password"
@@ -56,6 +71,11 @@
             android:hint="password"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5dp"/>
 
         <ImageView
             android:id="@+id/image_delete_user"
@@ -63,6 +83,7 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
              />
+
 
     </LinearLayout>
 
