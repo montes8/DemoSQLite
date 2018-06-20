@@ -43,12 +43,12 @@ class HomeActivity : AppCompatActivity() {
                   drawerLayout!!.openDrawer(GravityCompat.START)
                   return true
               }
-             R.id.info -> { startActivity<ListaUsuariosActivity>()}
+             R.id.info -> {}
 
              R.id.ayuda ->{
 
              }
-            R.id.cofiguracion ->{startActivity<ActualizarUsuarioActivity>()}
+            R.id.cofiguracion ->{startActivity<ListaUsuariosActivity>()}
 
         }
         return super.onOptionsItemSelected(item)

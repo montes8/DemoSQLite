@@ -16,7 +16,7 @@ class Usuario (
 
         var nombreUsuario : String? = "",
 
-        var contraseña :String? = "",
+        var contrasena :String? = "",
 
         var pais :String? = ""
 ): Parcelable

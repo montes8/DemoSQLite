@@ -38,7 +38,7 @@ class UsuarioAdapter(var onEliminarClick: ((Usuario) -> Unit)? = null ,var onAct
         holder.txId.text=users.idUsu.toString()
         holder.txNombre.text = users.nombre
         holder.txUser.text = users.nombreUsuario
-        holder.txPassword.text = users.contraseña
+        holder.txPassword.text = users.contrasena
 
         holder.buttonClick.setOnClickListener{
 

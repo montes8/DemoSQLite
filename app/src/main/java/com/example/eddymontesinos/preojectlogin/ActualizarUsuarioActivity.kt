@@ -1,5 +1,6 @@
 package com.example.eddymontesinos.preojectlogin
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,7 +21,7 @@ class ActualizarUsuarioActivity : AppCompatActivity() {
 
         edit_nombreModicar.setText(usuarioModificar.nombre)
         edit_usuarioModificar.setText(usuarioModificar.nombreUsuario)
-        edit_contraseniaModificar.setText(usuarioModificar.contraseña)
+        edit_contraseniaModificar.setText(usuarioModificar.contrasena)
         edit_paisModificar.setText(usuarioModificar.pais)
 
         button_actulizar.setOnClickListener{
@@ -29,14 +30,14 @@ class ActualizarUsuarioActivity : AppCompatActivity() {
                 //val idUsu = edit_idac.text.toString().toLong()
                 val nombre = edit_nombreModicar.text.toString()
                 val nombreUsuario = edit_usuarioModificar.text.toString()
-                val contraseña = edit_contraseniaModificar.text.toString()
+                val contrasena = edit_contraseniaModificar.text.toString()
                 val pais = edit_paisModificar.text.toString()
 
                 val usuario = Usuario()
                 usuario.idUsu= usuarioModificar.idUsu
                 usuario.nombre = nombre
                 usuario.nombreUsuario = nombreUsuario
-                usuario.contraseña = contraseña
+                usuario.contrasena = contrasena
                 usuario.pais = pais
 
                 DemoApplication.database!!.usuarioDao().updateUser(usuario)
@@ -49,6 +50,9 @@ class ActualizarUsuarioActivity : AppCompatActivity() {
             edit_usuarioModificar.setText("")
             edit_contraseniaModificar.setText("")
             edit_paisModificar.setText("")
+
+            val intent = Intent(this@ActualizarUsuarioActivity,HomeActivity::class.java)
+            startActivity(intent)
         }
     }
 }

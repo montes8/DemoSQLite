@@ -29,10 +29,7 @@ class RegistrarActivity : AppCompatActivity() {
         ajusteToolbar()
         cargarImagenGaleria()
         registrarUsuario()
-
-
     }
-
 
     private fun ajusteToolbar(){
         setSupportActionBar(mToolbar)
@@ -118,18 +115,17 @@ class RegistrarActivity : AppCompatActivity() {
                 val usuario = Usuario()
                 usuario.nombre = edit_text_nombre.text.toString()
                 usuario.nombreUsuario = edit_text_user.text.toString()
-                usuario.contraseña = edit_password.text.toString()
+                usuario.contrasena = edit_password.text.toString()
                 usuario.pais = edit_pais.text.toString()
                 DemoApplication.database!!.usuarioDao().insert(usuario)
 
             }.start()
-
+            toast("Usuario Registrado")
+                edit_text_nombre.requestFocus()
                 edit_text_nombre.setText("")
                 edit_text_user.setText("")
                 edit_password.setText("")
                 edit_pais.setText("")
-
-
             startActivity(intentFor<HomeActivity>().newTask().clearTask())
 
         }

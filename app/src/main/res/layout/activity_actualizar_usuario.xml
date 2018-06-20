@@ -85,6 +85,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:text="Modifica Usuario"
+        android:textColor="#f87503"
         android:textSize="20sp"
         android:gravity="center"
 

@@ -28,8 +28,8 @@ class ListaUsuariosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_listausuarios)
 
             recyclerView()
-
             refrescarListar()
+
         }
 
 
@@ -87,7 +87,5 @@ class ListaUsuariosActivity : AppCompatActivity() {
                }
                tarea.execute()*/
     }
-
-
 
  }
