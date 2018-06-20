@@ -14,15 +14,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="@drawable/button_style">
-
-        <ImageView
-            android:id="@+id/text_view_id1"
+        <TextView
+            android:id="@+id/text_id"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:src="@mipmap/ic_usuario" />
+            android:gravity="center"
+            android:hint="id"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
         <View
             android:layout_width="1dp"
             android:layout_height="36dp"
@@ -34,7 +35,6 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="3"
-            android:ems="5"
             android:gravity="center"
             android:hint="nombre"
             android:textColor="#FFFFFF"
@@ -50,7 +50,6 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="3"
-            android:ems="5"
             android:gravity="center"
             android:hint="usuario"
             android:textColor="#FFFFFF"
@@ -66,13 +65,12 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="3"
-            android:ems="5"
             android:gravity="center"
             android:hint="password"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
         <View
-            android:layout_width="1dp"
+            android:layout_width="2dp"
             android:layout_height="36dp"
             android:background="#FFFFFF"
             android:layout_marginTop="5dp"/>
@@ -83,6 +81,17 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
              />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="36dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5dp"/>
+        <ImageView
+            android:id="@+id/image_editar_user"
+            app:srcCompat="@mipmap/ic_editar"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            />
 
 
     </LinearLayout>

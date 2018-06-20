@@ -8,7 +8,6 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import com.example.eddymontesinos.preojectlogin.model.Usuario
 import kotlinx.android.synthetic.main.activity_registrar.*
 import org.jetbrains.anko.*
@@ -121,17 +120,15 @@ class RegistrarActivity : AppCompatActivity() {
                 usuario.nombreUsuario = edit_text_user.text.toString()
                 usuario.contraseña = edit_password.text.toString()
                 usuario.pais = edit_pais.text.toString()
-
                 DemoApplication.database!!.usuarioDao().insert(usuario)
-                DemoApplication.database!!.usuarioDao().listas().forEach{
-
-                    Log.d("listanombre", "nombre -- ${it.nombre}")
-                    Log.d("listaApellido", "apellido -- ${it.nombreUsuario}")
-                    Log.d("listaPassword", "pasword -- ${it.contraseña}")
-                    Log.d("listaPaises", "paises -- ${it.pais}")
-                }
 
             }.start()
+
+                edit_text_nombre.setText("")
+                edit_text_user.setText("")
+                edit_password.setText("")
+                edit_pais.setText("")
+
 
             startActivity(intentFor<HomeActivity>().newTask().clearTask())
 

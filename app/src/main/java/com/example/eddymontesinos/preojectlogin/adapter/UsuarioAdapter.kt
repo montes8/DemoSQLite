@@ -1,16 +1,19 @@
 package com.example.eddymontesinos.preojectlogin.adapter
 
+
+
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import org.jetbrains.anko.*
 import android.view.ViewGroup
-import com.example.eddymontesinos.preojectlogin.DemoApplication
+
 import com.example.eddymontesinos.preojectlogin.R
 import com.example.eddymontesinos.preojectlogin.model.Usuario
 import kotlinx.android.synthetic.main.molde_user.view.*
 
-class UsuarioAdapter(var onEliminarClick: ((Usuario) -> Unit)? = null  ) : RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder>(){
+class UsuarioAdapter(var onEliminarClick: ((Usuario) -> Unit)? = null ,var onActulizarUsuario: ((Usuario) ->Unit )?=null ) : RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder>(){
 
     private var user : List<Usuario>? = null
 
@@ -32,6 +35,7 @@ class UsuarioAdapter(var onEliminarClick: ((Usuario) -> Unit)? = null  ) : Recyc
 
     override fun onBindViewHolder(holder: UsuarioViewHolder, position: Int) {
         val users = user!![position]
+        holder.txId.text=users.idUsu.toString()
         holder.txNombre.text = users.nombre
         holder.txUser.text = users.nombreUsuario
         holder.txPassword.text = users.contraseña
@@ -40,16 +44,23 @@ class UsuarioAdapter(var onEliminarClick: ((Usuario) -> Unit)? = null  ) : Recyc
 
             onEliminarClick?.invoke(users)
         }
+        holder.buttonEditar.setOnClickListener{
+
+            onActulizarUsuario?.invoke(users)
+        }
+
 
     }
 
 
 
     class UsuarioViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
+        val txId = itemView.text_id
         val txNombre = itemView.text_nombre
         val txUser = itemView.text_usuario
         val txPassword = itemView.text_password
         val buttonClick= itemView.image_delete_user
+        val buttonEditar = itemView.image_editar_user
     }
 
 }

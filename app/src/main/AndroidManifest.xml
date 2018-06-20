@@ -24,7 +24,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrarActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".ListaUsuariosActivity"></activity>
+        <activity android:name=".ListaUsuariosActivity" />
+        <activity android:name=".ActualizarUsuarioActivity"></activity>
     </application>
 
 </manifest>

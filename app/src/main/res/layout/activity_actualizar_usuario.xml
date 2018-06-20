@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActualizarUsuarioActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <EditText
+        android:id="@+id/edit_nombreac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="nombre"
+        app:layout_constraintStart_toStartOf="@+id/edit_idac"
+        app:layout_constraintTop_toBottomOf="@+id/edit_idac" />
+
+    <EditText
+        android:id="@+id/edit_usuarioac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="usuario"
+        app:layout_constraintBottom_toTopOf="@+id/edit_passac"
+        app:layout_constraintStart_toStartOf="@+id/edit_nombreac" />
+
+    <EditText
+        android:id="@+id/edit_passac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="225dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="cotraseña"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edit_usuarioac" />
+
+    <Button
+        android:id="@+id/button_actulizar"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="actualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_paisac" />
+
+    <EditText
+        android:id="@+id/edit_paisac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="pais"
+        app:layout_constraintStart_toStartOf="@+id/edit_passac"
+        app:layout_constraintTop_toBottomOf="@+id/edit_passac" />
+
+    <EditText
+        android:id="@+id/edit_idac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

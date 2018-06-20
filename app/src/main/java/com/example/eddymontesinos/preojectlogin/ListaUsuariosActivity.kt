@@ -2,6 +2,7 @@ package com.example.eddymontesinos.preojectlogin
 
 
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +13,7 @@ import com.example.eddymontesinos.preojectlogin.adapter.UsuarioAdapter
 import com.example.eddymontesinos.preojectlogin.model.Usuario
 
 import kotlinx.android.synthetic.main.activity_listausuarios.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 
@@ -34,6 +36,14 @@ class ListaUsuariosActivity : AppCompatActivity() {
 
     fun recyclerView(){
             usuAdapter = UsuarioAdapter()
+
+            usuAdapter?.onActulizarUsuario= {
+
+                val intent = Intent(this@ListaUsuariosActivity,ActualizarUsuarioActivity::class.java)
+                intent.putExtra("usuario", it)
+                startActivity(intent)
+
+            }
 
             usuAdapter?.onEliminarClick = {
                 Thread {

@@ -48,6 +48,7 @@ class HomeActivity : AppCompatActivity() {
              R.id.ayuda ->{
 
              }
+            R.id.cofiguracion ->{startActivity<ActualizarUsuarioActivity>()}
 
         }
         return super.onOptionsItemSelected(item)

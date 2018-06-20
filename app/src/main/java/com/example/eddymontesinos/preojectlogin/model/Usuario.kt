@@ -2,7 +2,11 @@ package com.example.eddymontesinos.preojectlogin.model
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+
+@Parcelize
 @Entity
 class Usuario (
         @PrimaryKey(autoGenerate = true)
@@ -15,7 +19,7 @@ class Usuario (
         var contraseña :String? = "",
 
         var pais :String? = ""
-)
+): Parcelable
 
 
 
