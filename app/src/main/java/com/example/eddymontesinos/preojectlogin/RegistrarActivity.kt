@@ -122,6 +122,7 @@ class RegistrarActivity : AppCompatActivity() {
                 usuario.pais = edit_pais.text.toString()
                 DemoApplication.database!!.usuarioDao().insert(usuario)
 
+
             }.start()
             toast("Usuario Registrado")
                 edit_text_nombre.requestFocus()
