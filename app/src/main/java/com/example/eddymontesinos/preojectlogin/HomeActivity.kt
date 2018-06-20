@@ -1,6 +1,8 @@
 package com.example.eddymontesinos.preojectlogin
 
 
+import android.content.Intent
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -43,7 +45,6 @@ class HomeActivity : AppCompatActivity() {
                   drawerLayout!!.openDrawer(GravityCompat.START)
                   return true
               }
-             R.id.info -> {}
 
              R.id.ayuda ->{
 
@@ -77,8 +78,15 @@ class HomeActivity : AppCompatActivity() {
                     gestorDeFragmentos = true
                 }
                 R.id.menu_email -> {
-                    fragment = EmailFragment()
-                    gestorDeFragmentos = true
+                    //fragment = EmailFragment()
+                    //gestorDeFragmentos = true
+                    val email = "mi@gmial.com"
+                    val intentEmail = Intent(Intent.ACTION_SEND, Uri.parse(email))
+                    intentEmail.type = "plain/text"
+                    intentEmail.putExtra(Intent.EXTRA_SUBJECT,"Titulo del email")
+                    intentEmail.putExtra(Intent.EXTRA_TEXT,"hola ,estoy esperando la respuesta")
+                    intentEmail.putExtra(Intent.EXTRA_EMAIL, arrayOf("nvfrn@m.com","hola @gmail.com"))
+                    startActivity(Intent.createChooser(intentEmail,"Elige Cliente de Correo"))
                 }
                 R.id.menu_contactame -> {
                     fragment = EmailFragment()

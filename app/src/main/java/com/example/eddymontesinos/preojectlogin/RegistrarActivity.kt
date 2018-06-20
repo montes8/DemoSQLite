@@ -5,9 +5,12 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.os.Handler
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.text.TextUtils
+import android.view.View
 import com.example.eddymontesinos.preojectlogin.model.Usuario
 import kotlinx.android.synthetic.main.activity_registrar.*
 import org.jetbrains.anko.*
@@ -17,6 +20,7 @@ import java.io.File
 
 
 class RegistrarActivity : AppCompatActivity() {
+    var handler : Handler = Handler()
 
     private val CARPETA_RAIZ = "misImagenes/"
     private val RUTA_IMAGE = CARPETA_RAIZ + "misFotos"
@@ -109,7 +113,6 @@ class RegistrarActivity : AppCompatActivity() {
 
     private fun registrarUsuario(){
         button_click_register.setOnClickListener{
-
 
             Thread {
                 val usuario = Usuario()

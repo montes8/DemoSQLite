@@ -25,10 +25,6 @@
 
         <menu>
             <item
-                android:id="@+id/menu_entretenimiento"
-                android:icon="@android:drawable/ic_menu_delete"
-                android:title="Entretenimiento"/>
-            <item
                 android:id="@+id/menu_borrar"
                 android:icon="@android:drawable/ic_menu_delete"
                 android:title="Borrar"/>
