@@ -13,6 +13,8 @@ import android.text.style.StyleSpan
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.View
 import android.text.method.LinkMovementMethod
+import android.util.Log
+import com.example.eddymontesinos.preojectlogin.fragments.PerfilFragment
 import org.jetbrains.anko.*
 
 
@@ -56,8 +58,11 @@ class LoginActivity : AppCompatActivity() {
 
             Thread{
                 val usuario= DemoApplication.database?.usuarioDao()?.userLogin(edit_nombre_login.text.toString(),edit_password_login.text.toString())
+
                 if (usuario!=null){
                     handler.post {
+                        defaultSharedPreferences.edit().putString("pass",usuario?.idUsu.toString()).apply()
+                        Log.i("usuariologeado",usuario?.nombreUsuario)
                         startActivity(intentFor<HomeActivity>().newTask().clearTask())
                     }
                 }else {

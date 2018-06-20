@@ -11,8 +11,6 @@ import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import com.example.eddymontesinos.preojectlogin.fragments.EmailFragment
 import com.example.eddymontesinos.preojectlogin.fragments.FotosFragment
 import com.example.eddymontesinos.preojectlogin.fragments.PerfilFragment
 import kotlinx.android.synthetic.main.toolbar.*
@@ -88,12 +86,8 @@ class HomeActivity : AppCompatActivity() {
                     intentEmail.putExtra(Intent.EXTRA_EMAIL, arrayOf("nvfrn@m.com","hola @gmail.com"))
                     startActivity(Intent.createChooser(intentEmail,"Elige Cliente de Correo"))
                 }
-                R.id.menu_contactame -> {
-                    fragment = EmailFragment()
-                    gestorDeFragmentos = true
-                }
                 R.id.menu_borrar -> {
-                    toast("Borrar")
+                    startActivity<ListaUsuariosActivity>()
                 }
                 R.id.menu_ayuda -> {
                     toast("Ayuda")

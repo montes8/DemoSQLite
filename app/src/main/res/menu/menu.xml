@@ -16,10 +16,6 @@
             android:id="@+id/menu_email"
             android:icon="@android:drawable/ic_dialog_email"
             android:title="Email"/>
-        <item
-            android:id="@+id/menu_contactame"
-            android:icon="@android:drawable/stat_sys_phone_call"
-            android:title="Contactame"/>
     </group>
     <item android:title="Otras opciones">
 
