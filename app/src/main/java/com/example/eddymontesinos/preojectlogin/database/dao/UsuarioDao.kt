@@ -17,7 +17,7 @@ interface UsuarioDao {
 
 
     @Insert
-    fun insert(usuarios: Usuario)
+    fun insert(usuarios: Usuario) : Long
 
     @Delete
     fun deleteUser(usuarios: Usuario):Int

@@ -13,6 +13,7 @@ import com.example.eddymontesinos.preojectlogin.adapter.UsuarioAdapter
 import com.example.eddymontesinos.preojectlogin.model.Usuario
 
 import kotlinx.android.synthetic.main.activity_listausuarios.*
+import kotlinx.android.synthetic.main.toolbar.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
@@ -29,6 +30,7 @@ class ListaUsuariosActivity : AppCompatActivity() {
 
             recyclerView()
             refrescarListar()
+        ajusteToolbarLista()
 
         }
 
@@ -86,6 +88,13 @@ class ListaUsuariosActivity : AppCompatActivity() {
                    }
                }
                tarea.execute()*/
+    }
+
+
+    private fun ajusteToolbarLista(){
+        setSupportActionBar(mToolbar_lista)
+        title = getString(R.string.listaUsuarios)
+
     }
 
  }

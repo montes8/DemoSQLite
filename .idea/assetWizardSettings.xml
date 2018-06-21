@@ -45,6 +45,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundColor" value="ff5f47" />
+                                      <entry key="iconShape" value="NONE" />
                                       <entry key="outputName" value="ic_phone" />
                                     </map>
                                   </option>

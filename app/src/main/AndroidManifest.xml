@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:name=".DemoApplication"
@@ -23,7 +24,7 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrarActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeActivity" android:theme="@style/AppThemess"/>
         <activity android:name=".ListaUsuariosActivity" />
         <activity android:name=".ActualizarUsuarioActivity"></activity>
     </application>

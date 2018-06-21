@@ -62,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
                 if (usuario!=null){
                     handler.post {
                         defaultSharedPreferences.edit().putString("pass",usuario?.idUsu.toString()).apply()
-                        Log.i("usuariologeado",usuario?.nombreUsuario)
+                        toast("Bienvenido ${usuario?.nombreUsuario}")
                         startActivity(intentFor<HomeActivity>().newTask().clearTask())
                     }
                 }else {

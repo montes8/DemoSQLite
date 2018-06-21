@@ -13,15 +13,15 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.eddymontesinos.preojectlogin.fragments.FotosFragment
 import com.example.eddymontesinos.preojectlogin.fragments.PerfilFragment
+import kotlinx.android.synthetic.main.activity_registrar.*
 import kotlinx.android.synthetic.main.toolbar.*
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
+import org.jetbrains.anko.*
+import org.jetbrains.anko.support.v4.defaultSharedPreferences
 
 class HomeActivity : AppCompatActivity() {
 
     lateinit var drawerLayout :DrawerLayout
     lateinit var navigationView:NavigationView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -48,6 +48,8 @@ class HomeActivity : AppCompatActivity() {
 
              }
             R.id.cofiguracion ->{startActivity<ListaUsuariosActivity>()}
+
+            R.id.salir -> {startActivity(intentFor<LoginActivity>().newTask().clearTask())}
 
         }
         return super.onOptionsItemSelected(item)
@@ -107,4 +109,6 @@ class HomeActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_horizontal, menu)
         return true
     }
+
+
 }

@@ -120,17 +120,23 @@ class RegistrarActivity : AppCompatActivity() {
                 usuario.nombreUsuario = edit_text_user.text.toString()
                 usuario.contrasena = edit_password.text.toString()
                 usuario.pais = edit_pais.text.toString()
-                DemoApplication.database!!.usuarioDao().insert(usuario)
+                val resultado = DemoApplication.database!!.usuarioDao().insert(usuario)
+                //val a:Int = resultado.toInt()
+                if (resultado > 0) {
+                    handler.post { toast("Usuario Registrado")
+                        edit_text_nombre.setText("")
+                        edit_text_user.setText("")
+                        edit_password.setText("")
+                        edit_pais.setText("")
+
+                         startActivity(intentFor<HomeActivity>().newTask().clearTask()) }
+                }else{
+                    handler.post { toast("errorrrr") }
+                }
 
 
             }.start()
-            toast("Usuario Registrado")
-                edit_text_nombre.requestFocus()
-                edit_text_nombre.setText("")
-                edit_text_user.setText("")
-                edit_password.setText("")
-                edit_pais.setText("")
-            startActivity(intentFor<HomeActivity>().newTask().clearTask())
+
 
         }
 
